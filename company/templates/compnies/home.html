@@ -1,0 +1,14 @@
+{% if latest_company_list %}
+    <ul>
+    {% for company in latest_company_list %}
+        <!-- <li><a href="/company/{{ company.phone }}/">{{ company.name }}</a></li> -->
+        <li><a href="{% url 'client' client.name %}">{{ company.name }}</a></li>
+
+        {{company.location}}
+        {{company.phone}}
+        
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Company are available.</p>
+{% endif %} 

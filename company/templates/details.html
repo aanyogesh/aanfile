@@ -1,0 +1,13 @@
+{% if latest_client_list %}
+    <ul>
+    {% for client in latest_client_list %}
+        <!-- <li><a href="/company/{{ company.phone }}/">{{ company.name }}</a></li> -->
+        <li>{{ client.name }}</li>
+        <li>{{ client.location }}</li>
+        
+        
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Client are available.</p>
+{% endif %} 
